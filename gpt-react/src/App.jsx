@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 
 function ChatMessage({ message, type }) {
+    console.log(message);
     return (
         <div className="chat">
             {
@@ -60,6 +61,7 @@ function App() {
     return (
         <div className="main">
             <div className="container">
+                <div className="content">
                 {
                     allMessages.map((message, index) => (
                         <ChatMessage
@@ -69,6 +71,7 @@ function App() {
                         />
                     ))
                 }
+                </div>
                 <div className="input">
                     <input
                         value={inputMessage}

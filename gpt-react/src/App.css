@@ -65,20 +65,31 @@ body{
 .chat{
   max-width: 1280px;
   width: 100%;
-  height: 100%;
   background-color: #f9f9f9;;
+  margin: 0 auto 30px auto;
+}
+.content{
+ max-height: 100vh;
+  overflow: scroll;
   margin: 0 auto;
 }
-
 .question{
-  width: 250px;
-  height: 70px;
+  width: 400px;
+  border-radius: 30px;
+  min-height: 100px;
+  height: 100%;
+  padding: 20px 15px;
   background-color: purple;
   color: white;
+  font-size: 16px;
 }
 .question__error{
-  width: 250px;
-  height: 70px;
+  width: 400px;
+  border-radius: 30px;
+  min-height: 100px;
+  height: 100%;
   background-color: red;
   color: white;
+  padding: 20px 15px;
+  margin-left: 60vw;
 }
