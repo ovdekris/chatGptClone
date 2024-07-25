@@ -5,11 +5,11 @@ import { io } from "socket.io-client";
 function ChatMessage({ message, type }) {
     console.log(message);
     return (
-        <div className="chat">
+        <div className="chat-item">
             {
                 type === "send" ?
                     (<div className="question">{message}</div>) :
-                    (<div className="question__error">{message}</div>)
+                    (<div className="answer">{message}</div>)
             }
         </div>
     )
@@ -61,7 +61,7 @@ function App() {
     return (
         <div className="main">
             <div className="container">
-                <div className="content">
+                <div className="chat">
                 {
                     allMessages.map((message, index) => (
                         <ChatMessage
@@ -72,14 +72,14 @@ function App() {
                     ))
                 }
                 </div>
-                <div className="input">
+                <div className="input__section">
                     <input
                         value={inputMessage}
                         onChange={(e) => setInputMessage(e.target.value)}
                         type="text"
                         placeholder={textPlaceholder}
                     />
-                    <button onClick={sendMessage} className="input-btn">Send</button>
+                    <button onClick={sendMessage} className="input__section__btn">Send</button>
                 </div>
             </div>
         </div>

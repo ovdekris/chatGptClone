@@ -1,17 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/*Container Block*/
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 body{
   background-color: white;
   width: 100%;
-}
-#root{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
 }
 .main{
   width: 100%;
@@ -29,7 +27,16 @@ body{
   justify-content: flex-end;
   align-items: flex-end;
 }
-.input{
+.chat{
+  padding-top: 30px;
+  max-height: calc(100vh - 120px);
+  overflow: scroll;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/*Input*/
+.input__section{
   width: 100%;
   height: 150px;
   background-color: white;
@@ -38,7 +45,7 @@ body{
   justify-content: center;
   align-items: center;
 }
-.input input{
+.input__section input{
   width: 500px;
   height: 50px;
   border-radius: 15px;
@@ -48,13 +55,13 @@ body{
   border: none;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 14px;
 }
-.input input::placeholder{
+.input__section input::placeholder{
   color: lightslategrey;
 }
-.input input:focus{
+.input__section input:focus{
   outline: none;
 }
-.input-btn{
+.input__section__btn{
   width: 100px;
   height: 50px;
   border: none;
@@ -67,18 +74,11 @@ body{
 }
 
 /*Chat*/
-.chat{
+.chat-item{
   max-width: 1280px;
   width: 100%;
   background-color: white;
   margin: 0 auto 30px auto;
-}
-.content{
-  padding-top: 30px;
-  max-height: calc(100vh - 120px);
-  overflow: scroll;
-  margin: 0 auto;
-  background-color: white;
 }
 .question{
   width: 400px;
@@ -90,7 +90,7 @@ body{
   color: #232323;
   font-size: 18px;
 }
-.question__error{
+.answer{
   width: 400px;
   min-height: 100px;
   height: 100%;
@@ -99,5 +99,4 @@ body{
   padding: 20px 15px;
   margin-left: 60vw;
   border-radius: 35px 0 35px 35px;
-
 }
